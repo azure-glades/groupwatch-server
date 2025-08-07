@@ -20,4 +20,7 @@ node index.js
 ```
 
 This sets up the server locally. Connect to it via your local IP + port `3000`
-To expose this server to the internet (to allow your friends to join), use a tunnelling service
+To expose this server to the internet (to allow your friends to join), 
+1. Use a tunnelling service like cloudflare or ngrok.
+2. Use port forwarding.
+3. Fork/Clone and deploy on Railways/Render/Heroku etc.

@@ -90,6 +90,15 @@
     socket.emit('chat', { room, text: chatText });
     chatText = '';
   }
+  
+  function escapeHTML(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
 
   /* ---------- helper for <video> ---------- */
   function srcObject(node, stream) {
@@ -118,7 +127,7 @@
     <div>
       <ul>
         {#each messages as m}
-          <li><strong>{m.who}:</strong> {m.text}</li>
+          {@html `<li><strong>${escapeHTML(m.who)}:</strong> ${escapeHTML(m.text)}</li>`}
         {/each}
       </ul>
       <input bind:value={chatText} on:keydown={e => e.key === 'Enter' && sendChat()} />
