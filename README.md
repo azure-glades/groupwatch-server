@@ -2,9 +2,10 @@
 A minimal Node.js + Svelte app for sharing your screen with friends in real-time, featuring:
 - WebRTC video streaming (peer-to-peer)
 - WebSocket-backed chat and room management
-- No authentication—just share a room name
+- No authentication, just share a room name
 
-Audio can only be shared through browser tabs. Be sure to play local videos through the web-browser.
+Audio can only be shared through browser tabs. Be sure to play local videos through the web-browser to share audio.
+I tried to resolve this but it appears to be a limitation of WebRTC. Perhaps some other protocol should be take up to achieve this.
 
 # Quick start:
 
