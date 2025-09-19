@@ -1,0 +1,12 @@
+{
+    "name": "group-watch",
+    "version": "1.0.0",
+    "description": "Group-watch signalling server + Svelte client",
+    "main": "server/index.js",
+    "scripts": {
+      "build": "cd client && npm ci && npm run build",
+      "start": "cd server && npm ci && node index.js"
+    },
+    "dependencies": {},
+    "engines": { "node": "20.x" }
+  }
